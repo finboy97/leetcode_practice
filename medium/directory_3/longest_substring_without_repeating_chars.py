@@ -4,10 +4,12 @@ class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         used_chars = set()
         current_length=1
-        longest_substring=1
+        longest_substring=0
         current_pos = 0
         len_s = len(s)
         while current_pos<len_s:
+            if current_pos==0:
+                longest_substring=1
             element_to_end = s[current_pos+1:]
             used_chars.add(s[current_pos])
             for cur_char in element_to_end:

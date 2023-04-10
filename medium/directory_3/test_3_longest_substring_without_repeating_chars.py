@@ -12,3 +12,7 @@ class TestSolution(TestCase):
     def test_string_with_backtracking_for_longest(self):
         test_str="dvdf"
         self.assertEquals(Solution.lengthOfLongestSubstring(self,test_str),3)
+
+    def test_empty_string(self):
+        test_str=""
+        self.assertEquals(Solution.lengthOfLongestSubstring(self,test_str),0)
