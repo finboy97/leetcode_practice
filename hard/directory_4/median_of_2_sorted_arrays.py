@@ -21,13 +21,11 @@ class Solution:
         new_list.sort()
         if (len(new_list) %2 == 0):
             upper = math.floor(len(new_list)/2)
-            print(upper)
             lower = upper-1
-            print(upper)
             median = (new_list[upper] + new_list[lower])/2
             return median
         else:
             mid_pos = (len(new_list)-1)/2
             return float(new_list[int(round(mid_pos,0))])
 
-        #RESULT: 91ms, beats 76.78% (nice)
+        #RESULT: 85ms, beats 93% (nice)
